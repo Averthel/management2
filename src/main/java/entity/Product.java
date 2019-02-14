@@ -1,6 +1,10 @@
 package entity;
 
+import entity.enums.Color;
+
 public class Product {
+    public final static String PRODUCT_SEPARATOR = "#";
+
     private Long id;
     private String productName;
     private double price;
@@ -53,27 +57,8 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", productName='" + productName + '\'' +
-                ", price=" + price +
-                ", weight=" + weight +
-                ", color=" + color +
-                ", productCount=" + productCount +
-                '}';
+        return id + PRODUCT_SEPARATOR + productName + PRODUCT_SEPARATOR + price + PRODUCT_SEPARATOR + weight + PRODUCT_SEPARATOR + color + PRODUCT_SEPARATOR + productCount;
     }
 
-    public enum Color {
-        BLACK("#000000"), WHITE("#FFFFFF"), RED("#FF0000"), GREEN("#008000"), BLUE("#0000FF"), YELLOW("#FFFF00");
 
-        private String hex;
-
-        Color(String hex) {
-            this.hex = hex;
-        }
-
-        public String getHexColor() {
-            return hex;
-        }
-    }
 }

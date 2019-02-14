@@ -1,5 +1,7 @@
 package entity;
 
+import entity.enums.Color;
+
 public class Boots extends Product {
 
     private int size;

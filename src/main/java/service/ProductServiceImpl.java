@@ -37,17 +37,19 @@ public class ProductServiceImpl implements ProductService {
 
     public boolean isProductOnWarehouse(String productName) {
         for (Product szukany : products) {
-        if (isProductExistByName(productName) && getProductCount() > 0) {
-            return true;
+            if (isProductExistByName(productName) && getProductCount() > 0) {
+                return true;
+            }
         }
-    }
         return false;
-}
+    }
 
     public boolean isProductExistByName(String productName) {
         for (Product szukany : products) {
             if (szukany.getProductName().equals(productName)) {
                 return true;
+
+
             }
         }
         return false;

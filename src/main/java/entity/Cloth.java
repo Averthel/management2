@@ -1,5 +1,7 @@
 package entity;
 
+import entity.enums.Color;
+
 public class Cloth extends Product {
 
     private String size;
@@ -10,6 +12,7 @@ public class Cloth extends Product {
         this.size = size;
         this.material = material;
     }
+
 
     public String getSize() {
         return size;
